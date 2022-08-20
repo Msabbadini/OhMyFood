@@ -3,15 +3,23 @@
     width: calc(100% - 20px);
     padding: 40px 0;
     margin: 0 auto;
-    max-width: 720px;
+    max-width: 650px;
 
+    &_title {
+        margin-bottom: 20px;
+        width: 100%;
+    }
 
     &_flex {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
+        width: 100%;
+        counter-reset: restaurant;
+
+
     }
 
     &_container {
@@ -22,6 +30,15 @@
         border-radius: 25px;
         background: #f6f6f6;
         box-shadow: 0 5px 16px #0000002e;
+        animation-delay: 1000ms;
+        animation: restaurant_in 500ms linear;
+        animation-fill-mode: forwards;
+        @for $i from 1 to 4 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i *50ms;
+            }
+
+        }
 
         &_new {
             position: absolute;
@@ -138,3 +155,12 @@
     }
 }
 
+@keyframes restaurant_in {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
