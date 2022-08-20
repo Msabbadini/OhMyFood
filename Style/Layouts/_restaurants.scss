@@ -1,0 +1,140 @@
+
+.restaurant {
+    width: calc(100% - 20px);
+    padding: 40px 0;
+    margin: 0 auto;
+    max-width: 720px;
+
+
+    &_flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    &_container {
+        position: relative;
+        gap: 35px;
+        width: 300px;
+        height: auto;
+        border-radius: 25px;
+        background: #f6f6f6;
+        box-shadow: 0 5px 16px #0000002e;
+
+        &_new {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            width: 80px;
+            text-align: center;
+            font-size: 14px;
+            color: #369658;
+            background: $tertiaire;
+            border-radius: 15px;
+            font-weight: 800;
+            box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+            transform: scale(1);
+            animation: pulse-green 2s infinite;
+        }
+    }
+
+    &_img img {
+        width: 100%;
+        height: 140px;
+        border-radius: 24px 24px 0 0;
+        object-fit: cover;
+    }
+
+
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &_like {
+            fill: transparent;
+            stroke: $secondaire;
+            stroke-width: 20;
+            cursor: pointer;
+            position: relative;
+
+            svg {
+                overflow: visible;
+                width: 25px;
+
+                path {
+                    stroke-dashoffset: 0;
+                    stroke-dasharray: 1550;
+                    transform-origin: center;
+                }
+            }
+
+            .heart-background {
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                stroke: none;
+            }
+
+            .heart-main:hover path {
+                animation: stroke-animation 2s ease-in-out forwards;
+            }
+
+        }
+    }
+
+}
+
+@keyframes stroke-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    30% {
+        stroke-dashoffset: 1550;
+    }
+    60% {
+        stroke-dashoffset: 3100;
+        fill: transparent;
+        transform: scale(1);
+    }
+    80% {
+        fill: $secondaire;
+        transform: scale(1.1);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        stroke-dashoffset: 3100;
+        fill: $secondaire;
+    }
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+    }
+}
+

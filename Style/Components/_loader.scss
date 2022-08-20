@@ -1,0 +1,53 @@
+.bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: offside;
+    animation-duration: 3s;
+    transition: opacity 3s ease-in-out;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+
+    &_loader {
+        border: solid 17px lightgrey;
+        border-radius: 50%;
+        z-index: 1;
+        width: 167px;
+        height: 167px;
+        border-top-color: $tertiaire;
+        animation: rotate linear infinite;
+        animation-duration: 3s;
+    }
+}
+
+/* Animation du loader */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation du bloc */
+
+@keyframes offside {
+    from {
+
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+
+    }
+}

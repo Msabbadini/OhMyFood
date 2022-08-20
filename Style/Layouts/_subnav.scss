@@ -1,0 +1,16 @@
+
+.subnav {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    gap: 12px;
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: medium;
+        font-weight: normal;
+    }
+  }

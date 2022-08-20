@@ -1,0 +1,15 @@
+// importation du fichier root
+@import "Base/root";
+
+//Importation des différents fichiers
+@import "Base/base";
+@import "Components/button";
+@import "Components/loader";
+@import "Layouts/header";
+@import "Layouts/footer";
+@import "Layouts/subnav";
+@import "Layouts/exploration";
+@import "Layouts/fonctionnement";
+@import "Layouts/restaurants";
+@import "Pages/page_index";
+@import "Pages/page";

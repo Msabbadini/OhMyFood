@@ -1,0 +1,44 @@
+@import "../Base/root";
+
+.footer {
+    background-color: #353535;
+
+    &_container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-left: 30px;
+        max-width: 1200px;
+        min-height: 120px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1000px;
+            gap: 20px;
+        }
+    }
+
+    &_title {
+        width: 100%;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    &_link {
+        text-decoration: none;
+        color: white;
+        display: block;
+        width: 220px;
+        margin-bottom: 10px;
+    }
+
+    & i {
+        margin-right: 10px;
+    }
+}

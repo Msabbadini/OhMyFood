@@ -1,0 +1,26 @@
+@import "root";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font_main, arial, sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.font-main {
+  font-family: $font_main, arial, sans-serif;
+}
+
+.font-title {
+  font-family: $font_title, verdana, arial, sans-serif;
+}
+
+.flex-center {
+  display : flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

@@ -1,0 +1,217 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: 60px;
+        width: 100%;
+
+        &_logo {
+            img {
+                height: 40px;
+
+            }
+        }
+    }
+
+
+}
+
+.sub_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+    gap: 12px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+main {
+    background-color: whitesmoke;
+
+}
+
+.container_restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    top: -50px;
+    border-radius: 30px 30px 0 0;
+    background-color: whitesmoke;
+
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    gap: 40px;
+
+    &_title {
+        margin-top: 20px;
+        margin-left: 15px;
+        text-align: center;
+    }
+
+    &_like {
+        margin-top: 20px;
+        margin-right: 15px;
+        fill: transparent;
+        stroke: $secondaire;
+        stroke-width: 20;
+        cursor: pointer;
+        position: relative;
+
+        svg {
+            overflow: visible;
+            width: 25px;
+
+            path {
+                stroke-dashoffset: 0;
+                stroke-dasharray: 1550;
+                transform-origin: center;
+            }
+        }
+
+        .heart-background {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            stroke: none;
+        }
+
+        .heart-main:hover path {
+            animation: stroke-animation 2s ease-in-out forwards;
+        }
+
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 25px;
+    width: 100%;
+    gap: 70px;
+
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &_cat_title {
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-bottom: 20px;
+
+
+        &::after {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            content: "";
+            background-color: $tertiaire;
+        }
+    }
+
+    &_plat {
+        position: relative;
+        width: 100%;
+        height: 70px;
+        border-radius: 25%;
+        margin-top: 20px;
+
+
+        &_left {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            box-shadow: 0 5px 16px #0000002e;
+            border-radius: 15px;
+            overflow: hidden;
+
+            &:hover > .menu_plat_check {
+                transform: translateX(-50px);
+
+            }
+
+            &:hover > .menu_plat_title {
+                width: calc(100% - 100px);
+
+            }
+
+        }
+
+        &_title {
+            display: inline-block;
+            width: calc(100% - 50px);
+            transition: width 0.3s ease-in-out;
+            padding-left: 10px;
+
+            h3, p {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+        }
+
+        &_price {
+            display: inline-block;
+            width: 50px;
+            font-weight: 600;
+        }
+
+
+        &_check {
+            position: absolute;
+            top: 0;
+            right: -50px;
+            height: 100%;
+            width: 50px;
+            background-color: $tertiaire;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+
+            .fa-check-circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+
+}
