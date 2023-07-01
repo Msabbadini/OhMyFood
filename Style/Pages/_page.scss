@@ -1,3 +1,16 @@
+// Animation 
+@keyframes restaurant_in {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -115,6 +128,17 @@ main {
     width: 100%;
     gap: 70px;
 
+    @for $i from 1 through 3 {
+        &_container:nth-child(#{$i}) {
+            animation-delay: $i *400ms;
+
+            @for $j from 1 through 4{
+                & .menu_plat:nth-child(#{$j}){
+                    animation-delay: ($j *400ms)+($i*400ms);
+                }
+
+            }
+        }}
 
     &_container {
         display: flex;
@@ -123,6 +147,10 @@ main {
         align-items: start;
         width: 100%;
         max-width: 400px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: restaurant_in 2s ease-in-out;
+        animation-fill-mode: forwards;
     }
 
     &_cat_title {
@@ -150,6 +178,10 @@ main {
         height: 70px;
         border-radius: 25%;
         margin-top: 20px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: restaurant_in 0.5s ease-in-out;
+        animation-fill-mode: forwards;
 
 
         &_left {

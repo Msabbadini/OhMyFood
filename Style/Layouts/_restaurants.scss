@@ -30,15 +30,7 @@
         border-radius: 25px;
         background: #f6f6f6;
         box-shadow: 0 5px 16px #0000002e;
-        animation-delay: 1000ms;
-        animation: restaurant_in 500ms linear;
-        animation-fill-mode: forwards;
-        @for $i from 1 to 4 {
-            &:nth-child(#{$i}) {
-                animation-delay: $i *50ms;
-            }
 
-        }
 
         &_new {
             position: absolute;
@@ -155,12 +147,4 @@
     }
 }
 
-@keyframes restaurant_in {
-    0% {
-        opacity: 0;
 
-    }
-    100% {
-        opacity: 1;
-    }
-}

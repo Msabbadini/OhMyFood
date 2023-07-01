@@ -1,191 +1,194 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Importation des icones  -->
-    <script
-            src="https://kit.fontawesome.com/f7214ee946.js"
-            crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/f7214ee946.js" crossorigin="anonymous"></script>
     <!-- Importation du fichier style    -->
     <link rel="stylesheet" href="Style/main.css"/>
     <title>OhMyFood</title>
 </head>
 <body>
+    <div id="accueil">
 
-<div id="accueil">
-    <!-- Bloc Header -->
-    <header>
-        <div class="header__nav">
-            <a href="#accueil">
-                <img
-                        src="Assets/logo/ohmyfood.png"
-                        alt="Logo De la société OhMyFood"
-                />
-            </a>
-        </div>
-    </header>
-    <main>
-        <div class="subnav">
-            <i class="fa-solid fa-location-dot"></i>
-            <a href="#">Paris, Belleville</a>
-        </div>
+        <!-- Bloc Header -->
+        <header>
+            <div class="header__nav">
+                <a href="#accueil">
+                    <img
+                            src="Assets/logo/ohmyfood.png"
+                            alt="Logo De la société OhMyFood"
+                            width="100%"
+                            height="40"
+                    />
+                </a>
+            </div>
+        </header>
 
-        <section class="section_top">
-            <!-- Bloc Exploration  -->
-            <div class="exploration">
-                <h1>Réservez le menu qui vous convient</h1>
-                <p>
-                    Découvrez des restaurants d'exception, sélectionnés par nos soins
-                </p>
-                <button>Explorer nos restaurants</button>
+        <main>
+            <div class="subnav">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#">Paris, Belleville</a>
             </div>
 
-            <!-- Bloc Fonctionnement -->
-            <div class="fonctionnement">
-                <h3>Fonctionnement</h3>
-                <div class="fonctionnement_container">
+            <section class="section_top">
+                <!-- Bloc Exploration  -->
+                <div class="exploration">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>
+                        Découvrez des restaurants d'exception, sélectionnés par nos soins
+                    </p>
+                    <button>Explorer nos restaurants</button>
+                </div>
+
+                <!-- Bloc Fonctionnement -->
+                <div class="fonctionnement">
+                    <h3>Fonctionnement</h3>
+                    <div class="fonctionnement_container">
+
+                        <!-- Card 1 -->
+                        <div class="fonctionnement_card">
+                            <span class="fonctionnement_card_number flex-center">1</span>
+                            <i class="fa-solid fa-mobile-screen-button flex-center"></i>
+                            <span class="fonctionnement_card_content">Choissisez un restaurant</span>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="fonctionnement_card">
+                            <span class="fonctionnement_card_number flex-center">2</span>
+                            <i class="fa-solid fa-list flex-center"></i>
+                            <span class="fonctionnement_card_content">Composer votre menu</span>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="fonctionnement_card last">
+                            <span class="fonctionnement_card_number flex-center">3</span>
+                            <i class="fa-solid fa-store flex-center"></i>
+                            <span class="fonctionnement_card_content">Déguster au restaurant</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bloc Restaurant -->
+            <section class="restaurant">
+                <h2 class="restaurant_title">Restaurant</h2>
+                <div class="restaurant_flex">
 
                     <!-- Card 1 -->
-                    <div class="fonctionnement_card">
-                        <span class="fonctionnement_card_number flex-center">1</span>
-                        <i class="fa-solid fa-mobile-screen-button flex-center"></i>
-                        <span class="fonctionnement_card_content">Choissisez un restaurant</span>
-                    </div>
+                    <article class="restaurant_container">
+                        <a href="Pages/la_palette_du_gout.html">
+                            <div class="restaurant_img">
+                                <img src="Assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                    alt="Restaurant La palette du gout">
+                            </div>
+                            <span class="restaurant_container_new">Nouveau</span>
+                            <div class="restaurant_content">
+                                <div>
+                                    <h4 class="restaurant_content_title">La palette du goût</h4>
+                                    <p class="restaurant_content_ville">Ménilmontant</p>
+                                </div>
 
+                                <div class="restaurant_content_like">
+                                    <svg class="heart-main" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
                     <!-- Card 2 -->
-                    <div class="fonctionnement_card">
-                        <span class="fonctionnement_card_number flex-center">2</span>
-                        <i class="fa-solid fa-list flex-center"></i>
-                        <span class="fonctionnement_card_content">Composer votre menu</span>
-                    </div>
+                    <article class="restaurant_container">
+                        <a href="Pages/la_note_enchantee.html">
+                            <div class="restaurant_img">
+                                <img src="Assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                    alt="Restaurant La palette du gout">
+                            </div>
+                            <span class="restaurant_container_new">Nouveau</span>
+                            <div class="restaurant_content">
+                                <div>
+                                    <h4 class="restaurant_content_title">La note enchantée</h4>
+                                    <p class="restaurant_content_ville">Charonne</p>
+                                </div>
 
+                                <div class="restaurant_content_like">
+                                    <svg class="heart-main" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
                     <!-- Card 3 -->
-                    <div class="fonctionnement_card last">
-                        <span class="fonctionnement_card_number flex-center">3</span>
-                        <i class="fa-solid fa-store flex-center"></i>
-                        <span class="fonctionnement_card_content">Déguster au restaurant</span>
-                    </div>
+                    <article class="restaurant_container">
+                        <a href="Pages/a_la_francaise.html">
+                            <div class="restaurant_img">
+                                <img src="Assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                    alt="Restaurant La palette du gout">
+                            </div>
+                            <div class="restaurant_content">
+                                <div>
+                                    <h4 class="restaurant_content_title">A la française</h4>
+                                    <p class="restaurant_content_ville">Cité Rouge</p>
+                                </div>
 
+                                <div class="restaurant_content_like">
+                                    <svg class="heart-main" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="restaurant_container">
+                        <a href="Pages/le_delice_des_sens.html">
+                            <div class="restaurant_img">
+                                <img src="Assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                    alt="Restaurant La palette du gout">
+                            </div>
+                            <div class="restaurant_content">
+                                <div>
+                                    <h4 class="restaurant_content_title">Le délice des sens</h4>
+                                    <p class="restaurant_content_ville">Folie-Méricourt</p>
+                                </div>
+
+                                <div class="restaurant_content_like">
+                                    <svg class="heart-main" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                    <svg class="heart-background" viewBox="0 0 512 512" width="100"
+                                        title="heart">
+                                        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Bloc Restaurant -->
-        <section class="restaurant">
-            <h2 class="restaurant_title">Restaurant</h2>
-            <div class="restaurant_flex">
-
-                <!-- Card 1 -->
-                <article class="restaurant_container">
-                    <a href="Pages/la_palette_du_gout.html">
-                        <div class="restaurant_img">
-                            <img src="Assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                 alt="Restaurant La palette du gout">
-                        </div>
-                        <span class="restaurant_container_new">Nouveau</span>
-                        <div class="restaurant_content">
-                            <div>
-                                <h4 class="restaurant_content_title">La palette du goût</h4>
-                                <p class="restaurant_content_ville">Ménilmontant</p>
-                            </div>
-
-                            <div class="restaurant_content_like">
-                                <svg class="heart-main" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                                <svg class="heart-background" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-                <!-- Card 2 -->
-                <article class="restaurant_container">
-                    <a href="Pages/la_note_enchantee.html">
-                        <div class="restaurant_img">
-                            <img src="Assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                 alt="Restaurant La palette du gout">
-                        </div>
-                        <span class="restaurant_container_new">Nouveau</span>
-                        <div class="restaurant_content">
-                            <div>
-                                <h4 class="restaurant_content_title">La note enchantée</h4>
-                                <p class="restaurant_content_ville">Charonne</p>
-                            </div>
-
-                            <div class="restaurant_content_like">
-                                <svg class="heart-main" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                                <svg class="heart-background" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-                <!-- Card 3 -->
-                <article class="restaurant_container">
-                    <a href="Pages/a_la_francaise.html">
-                        <div class="restaurant_img">
-                            <img src="Assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                 alt="Restaurant La palette du gout">
-                        </div>
-                        <div class="restaurant_content">
-                            <div>
-                                <h4 class="restaurant_content_title">A la française</h4>
-                                <p class="restaurant_content_ville">Cité Rouge</p>
-                            </div>
-
-                            <div class="restaurant_content_like">
-                                <svg class="heart-main" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                                <svg class="heart-background" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-                <!-- Card 4 -->
-                <article class="restaurant_container">
-                    <a href="Pages/le_delice_des_sens.html">
-                        <div class="restaurant_img">
-                            <img src="Assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                 alt="Restaurant La palette du gout">
-                        </div>
-                        <div class="restaurant_content">
-                            <div>
-                                <h4 class="restaurant_content_title">Le délice des sens</h4>
-                                <p class="restaurant_content_ville">Folie-Méricourt</p>
-                            </div>
-
-                            <div class="restaurant_content_like">
-                                <svg class="heart-main" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                                <svg class="heart-background" viewBox="0 0 512 512" width="100"
-                                     title="heart">
-                                    <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-
+        </main>
+        
         <!-- Bloc Footer -->
         <footer class="footer">
             <div class="footer_container">
@@ -198,13 +201,13 @@
                     <i class="fa-solid fa-handshake-angle"></i> Devenir Partenaire
                 </a>
                 <a href="#" class="footer_link">Mentions légales</a>
-                <a href="#" class="footer_link">Contact</a>
+                <a href="mailto:maxime.sabbadini@orange.fr" class="footer_link">Contact</a>
             </div>
         </footer>
-    </main>
-</div>
-<div class="bloc">
-    <div class="bloc_loader"></div>
-</div>
+    </div>
+
+    <div class="bloc">
+        <div class="bloc_loader"></div>
+    </div>
 </body>
 </html>
