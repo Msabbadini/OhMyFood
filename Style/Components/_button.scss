@@ -1,6 +1,7 @@
 button {
-    background: linear-gradient($secondaire, $primaire);
+    background: linear-gradient($secondaire, transparent) $primaire;
     display: inline-block;
+    position: relative;
     text-align: center;
     margin: 0 auto;
     padding: 15px 30px;
@@ -14,5 +15,7 @@ button {
 
     &:hover {
         transform: scale(1.15);
+        background-color: #AE80E5;
     }
+
 }

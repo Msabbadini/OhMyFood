@@ -30,8 +30,9 @@ a {
 }
 
 button {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, transparent) #9356DC;
   display: inline-block;
+  position: relative;
   text-align: center;
   margin: 0 auto;
   padding: 15px 30px;
@@ -45,6 +46,7 @@ button {
 }
 button:hover {
   transform: scale(1.15);
+  background-color: #AE80E5;
 }
 
 .bloc {
@@ -57,15 +59,11 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-animation: offside;
-          animation: offside;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation: offside;
+  animation-duration: 3s;
   transition: opacity 3s ease-in-out;
-  -webkit-animation-delay: 1.75s;
-          animation-delay: 1.75s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
 }
 .bloc_loader {
   border: solid 17px lightgrey;
@@ -74,21 +72,11 @@ button:hover {
   width: 167px;
   height: 167px;
   border-top-color: #99E2D0;
-  -webkit-animation: rotate linear infinite;
-          animation: rotate linear infinite;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation: rotate linear infinite;
+  animation-duration: 3s;
 }
 
 /* Animation du loader */
-@-webkit-keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -98,16 +86,6 @@ button:hover {
   }
 }
 /* Animation du bloc */
-@-webkit-keyframes offside {
-  from {
-    opacity: 1;
-  }
-  to {
-    display: none;
-    opacity: 0;
-    z-index: -1;
-  }
-}
 @keyframes offside {
   from {
     opacity: 1;
@@ -211,15 +189,20 @@ header img {
   font-weight: 500;
 }
 
+.background_fonctionnement {
+  background: white;
+  width: 100%;
+}
+@media screen and (min-width: 720px) {
+  .background_fonctionnement {
+    background: transparent;
+  }
+}
+
 .fonctionnement {
   width: calc(100% - 20px);
   padding: 40px 10px;
   margin: 0 auto;
-}
-@media screen and (max-width: 350px) {
-  .fonctionnement {
-    max-width: 330px;
-  }
 }
 .fonctionnement h3 {
   font-size: larger;
@@ -232,17 +215,24 @@ header img {
   width: 100%;
   padding: 15px 0;
 }
+@media screen and (max-width: 768px) {
+  .fonctionnement_container {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .fonctionnement_card {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   gap: 15px;
-  height: 50px;
+  height: 70px;
   width: 100%;
-  border-radius: 40px;
+  max-width: 330px;
+  border-radius: 20px;
   background-color: #f6f6f6;
-  box-shadow: 0px 6px 20px 0px gray;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.15);
 }
 .fonctionnement_card_number {
   height: 20px;
@@ -312,8 +302,7 @@ header img {
   font-weight: 800;
   box-shadow: 0 0 0 0 rgb(51, 217, 178);
   transform: scale(1);
-  -webkit-animation: pulse-green 2s infinite;
-          animation: pulse-green 2s infinite;
+  animation: pulse-green 2s infinite;
 }
 .restaurant_img img {
   width: 100%;
@@ -358,33 +347,7 @@ header img {
   stroke: none;
 }
 .restaurant_content_like .heart-main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
-}
-
-@-webkit-keyframes stroke-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  30% {
-    stroke-dashoffset: 1550;
-  }
-  60% {
-    stroke-dashoffset: 3100;
-    fill: transparent;
-    transform: scale(1);
-  }
-  80% {
-    fill: #FF79DA;
-    transform: scale(1.1);
-  }
-  90% {
-    transform: scale(1);
-  }
-  100% {
-    stroke-dashoffset: 3100;
-    fill: #FF79DA;
-  }
+  animation: stroke-animation 2s ease-in-out forwards;
 }
 
 @keyframes stroke-animation {
@@ -409,20 +372,6 @@ header img {
   100% {
     stroke-dashoffset: 3100;
     fill: #FF79DA;
-  }
-}
-@-webkit-keyframes pulse-green {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
   }
 }
 @keyframes pulse-green {
@@ -452,17 +401,6 @@ header img {
   .section_top {
     flex-direction: row;
     gap: 25px;
-  }
-}
-
-@-webkit-keyframes restaurant_in {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -565,8 +503,7 @@ main {
   stroke: none;
 }
 .info_like .heart-main:hover path {
-  -webkit-animation: stroke-animation 2s ease-in-out forwards;
-          animation: stroke-animation 2s ease-in-out forwards;
+  animation: stroke-animation 2s ease-in-out forwards;
 }
 
 .menu {
@@ -579,64 +516,49 @@ main {
   gap: 70px;
 }
 .menu_container:nth-child(1) {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
+  animation-delay: 400ms;
 }
 .menu_container:nth-child(1) .menu_plat:nth-child(2) {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+  animation-delay: 1200ms;
 }
 .menu_container:nth-child(1) .menu_plat:nth-child(3) {
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  animation-delay: 1600ms;
 }
 .menu_container:nth-child(1) .menu_plat:nth-child(4) {
-  -webkit-animation-delay: 1600ms;
-          animation-delay: 1600ms;
+  animation-delay: 2000ms;
 }
 .menu_container:nth-child(1) .menu_plat:nth-child(5) {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  animation-delay: 2400ms;
 }
 .menu_container:nth-child(2) {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-}
-.menu_container:nth-child(2) .menu_plat:nth-child(1) {
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  animation-delay: 800ms;
 }
 .menu_container:nth-child(2) .menu_plat:nth-child(2) {
-  -webkit-animation-delay: 1600ms;
-          animation-delay: 1600ms;
+  animation-delay: 1600ms;
 }
 .menu_container:nth-child(2) .menu_plat:nth-child(3) {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  animation-delay: 2000ms;
 }
 .menu_container:nth-child(2) .menu_plat:nth-child(4) {
-  -webkit-animation-delay: 2400ms;
-          animation-delay: 2400ms;
+  animation-delay: 2400ms;
+}
+.menu_container:nth-child(2) .menu_plat:nth-child(5) {
+  animation-delay: 2800ms;
 }
 .menu_container:nth-child(3) {
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
-}
-.menu_container:nth-child(3) .menu_plat:nth-child(1) {
-  -webkit-animation-delay: 1600ms;
-          animation-delay: 1600ms;
+  animation-delay: 1200ms;
 }
 .menu_container:nth-child(3) .menu_plat:nth-child(2) {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  animation-delay: 2000ms;
 }
 .menu_container:nth-child(3) .menu_plat:nth-child(3) {
-  -webkit-animation-delay: 2400ms;
-          animation-delay: 2400ms;
+  animation-delay: 2400ms;
 }
 .menu_container:nth-child(3) .menu_plat:nth-child(4) {
-  -webkit-animation-delay: 2800ms;
-          animation-delay: 2800ms;
+  animation-delay: 2800ms;
+}
+.menu_container:nth-child(3) .menu_plat:nth-child(5) {
+  animation-delay: 3200ms;
 }
 .menu_container {
   display: flex;
@@ -647,10 +569,8 @@ main {
   max-width: 400px;
   opacity: 0;
   transform: translateY(50px);
-  -webkit-animation: restaurant_in 2s ease-in-out;
-          animation: restaurant_in 2s ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: restaurant_in 2s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .menu_cat_title {
   position: relative;
@@ -672,14 +592,12 @@ main {
   position: relative;
   width: 100%;
   height: 70px;
-  border-radius: 25%;
+  border-radius: 15px;
   margin-top: 20px;
   opacity: 0;
   transform: translateY(50px);
-  -webkit-animation: restaurant_in 0.5s ease-in-out;
-          animation: restaurant_in 0.5s ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: restaurant_in 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .menu_plat_left {
   display: flex;
@@ -692,7 +610,11 @@ main {
   overflow: hidden;
 }
 .menu_plat_left:hover > .menu_plat_check {
-  transform: translateX(-50px);
+  transform: translateX(-60px);
+}
+.menu_plat_left:hover > .menu_plat_check i {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 .menu_plat_left:hover > .menu_plat_title {
   width: calc(100% - 100px);
@@ -703,7 +625,8 @@ main {
   transition: width 0.3s ease-in-out;
   padding-left: 10px;
 }
-.menu_plat_title h3, .menu_plat_title p {
+.menu_plat_title h3,
+.menu_plat_title p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -714,18 +637,29 @@ main {
   font-weight: 600;
 }
 .menu_plat_check {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   position: absolute;
   top: 0;
-  right: -50px;
+  margin: auto 0;
+  right: -60px;
   height: 100%;
-  width: 50px;
+  width: 60px;
   background-color: #99E2D0;
   color: white;
   transition: transform 0.3s ease-in-out;
+}
+.menu_plat_check i {
+  opacity: 0;
+  transform: rotate(-270deg);
+  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
 }
 .menu_plat_check .fa-check-circle {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 24px;
 }/*# sourceMappingURL=main.css.map */

@@ -133,7 +133,7 @@ main {
         &_container:nth-child(#{$i}) {
             animation-delay: $i *400ms;
 
-            @for $j from 1 through 4 {
+            @for $j from 2 through 5 {
                 & .menu_plat:nth-child(#{$j}) {
                     animation-delay: ($j *400ms)+($i*400ms);
                 }
@@ -178,7 +178,7 @@ main {
         position: relative;
         width: 100%;
         height: 70px;
-        border-radius: 25%;
+        border-radius: 15px;
         margin-top: 20px;
         opacity: 0;
         transform: translateY(50px);
@@ -197,8 +197,12 @@ main {
             overflow: hidden;
 
             &:hover>.menu_plat_check {
-                transform: translateX(-50px);
+                transform: translateX(-60px);
 
+                & i {
+                    opacity: 1;
+                    transform: rotate(0deg);
+                }
             }
 
             &:hover>.menu_plat_title {
@@ -231,20 +235,36 @@ main {
 
 
         &_check {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
             position: absolute;
             top: 0;
-            right: -50px;
+            margin: auto 0;
+            right: -60px;
             height: 100%;
-            width: 50px;
+            width: 60px;
             background-color: $tertiaire;
             color: white;
             transition: transform 0.3s ease-in-out;
+
+            i {
+                opacity: 0;
+                transform: rotate(-270deg);
+                transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+            }
+
+
+
+
 
             .fa-check-circle {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100%;
+                width: 24px;
             }
         }
     }
